@@ -1,0 +1,34 @@
+//
+// Spinkit variables.
+//
+$spinkit-spinner-margin: 2rem auto;
+$spinkit-size: 3rem;
+$spinkit-spinner-color: config('colors.dg');
+$spinkit-spinner-color-light: config('colors.lg');
+
+//
+// Spinkit helpers.
+//
+.sk-light {
+    background-color: $spinkit-spinner-color-light !important;
+}
+
+.sk-double-bounce, .sk-three-bounce {
+    margin: 0 auto !important;
+}
+
+//
+// Import library from node.
+//
+@import
+    "node_modules/spinkit/scss/spinners/1-rotating-plane",
+    "node_modules/spinkit/scss/spinners/2-double-bounce",
+    "node_modules/spinkit/scss/spinners/3-wave",
+    "node_modules/spinkit/scss/spinners/4-wandering-cubes",
+    "node_modules/spinkit/scss/spinners/5-pulse",
+    "node_modules/spinkit/scss/spinners/6-chasing-dots",
+    "node_modules/spinkit/scss/spinners/7-three-bounce",
+    "node_modules/spinkit/scss/spinners/8-circle",
+    "node_modules/spinkit/scss/spinners/9-cube-grid",
+    "node_modules/spinkit/scss/spinners/10-fading-circle",
+    "node_modules/spinkit/scss/spinners/11-folding-cube";

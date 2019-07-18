@@ -1,0 +1,45 @@
+
+//
+// Basic fade
+//
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 200ms
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0
+}
+
+//
+// Tabulated data
+//
+
+// Base 
+.tabulated {
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+// Moving
+.tabulated-move {
+    transition: all 300ms ease-in-out 50ms;
+}
+
+// Appearing
+.tabulated-enter-active {
+    transition: all 300ms ease-out;
+}
+
+// Disappearing
+.tabulated-leave-active {
+    transition: all 200ms ease-in;
+    position: absolute;
+    z-index: 0;
+}
+
+// Appear at / disappear to
+.tabulated-enter,
+.tabulated-leave-to {
+    opacity: 0;
+}

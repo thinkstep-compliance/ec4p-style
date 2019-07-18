@@ -1,0 +1,21 @@
+// Font imports
+@import url("https://use.typekit.net/nsj2nja.css");
+
+@tailwind base;
+
+@tailwind components;
+
+// Partials
+@import "_colours",
+        "_dropdowns",
+        "_icons",
+        "_modals",
+        "_transitions-vue",
+        "_transitions";
+
+// Libraries
+@import "libraries/animate",
+        "libraries/flags",
+        "libraries/spinkit";
+
+@tailwind utilities;

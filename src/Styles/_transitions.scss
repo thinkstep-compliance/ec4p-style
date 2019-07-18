@@ -1,0 +1,61 @@
+
+//
+// Transitions
+//
+
+.trans\:all {
+    transition: all 200ms ease;
+}
+
+.trans\:all-long {
+    transition: all 300ms ease;
+}
+
+.trans\:all-superlong {
+    transition: all 600ms ease-in-out;
+}
+
+.trans\:bg {
+    transition: background-color 200ms ease;
+}
+
+.trans\:text {
+    transition: color 200ms ease;
+}
+
+.trans\:shadow {
+    transition: box-shadow 200ms ease;
+}
+
+//
+// Spinning
+//
+
+.make-me-spin {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.in-reverse {
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+//
+// Rotate
+//
+
+.turn-180 {
+    transform: rotate(180deg);
+}

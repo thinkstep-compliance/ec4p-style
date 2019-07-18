@@ -1,13 +1,15 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
-mix.js('src/app.js', 'dist/js/');
+mix.js('src/App/index.js', 'dist/js/app.js');
 
-mix.sass('src/app.scss', 'dist/css/')
+mix.sass('src/Styles/index.scss', 'dist/css/app.css')
     .options({
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.config.js')],
     });
+
+mix.browserSync('ec4p-style.loc');
 
 // Full API
 // mix.js(src, output);

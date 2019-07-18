@@ -1,0 +1,29 @@
+
+//
+// EC4P Logo Circle
+//
+
+#LogoCircle {
+    filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0));
+    animation: spinEc4p 1s ease;
+    animation-play-state: paused;
+    transition: filter 100ms ease;
+}
+
+#LogoCircle:hover {
+    filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.12));
+}
+
+#LogoCircle:active, #LogoCircle:focus {
+    animation-play-state: running;
+}
+
+@keyframes spinEc4p {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

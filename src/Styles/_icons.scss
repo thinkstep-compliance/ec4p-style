@@ -1,0 +1,128 @@
+/* --------------------------------
+
+Icon colors
+
+-------------------------------- */
+
+.nc-icon {
+    display: inline-block;
+    /* icon primary color */
+    color: config('colors.dg');
+}
+
+/* --------------------------------
+
+Icon link styles
+
+-------------------------------- */
+
+.icon-link {
+    display: inline-block;
+    /* icon primary color */
+    color: config('colors.do-lighter');
+    opacity: 0.8;
+    transition: all .2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: config('colors.do-lighter');
+        opacity: 1;
+    }
+}
+
+/* --------------------------------
+
+Icon basic style
+
+-------------------------------- */
+
+.nc-icon.grid-16 {
+    height: 16px;
+    width: 16px;
+}
+
+.nc-icon.grid-24 {
+    height: 24px;
+    width: 24px;
+}
+
+.nc-icon.grid-32 {
+    height: 32px;
+    width: 32px;
+}
+
+.nc-icon.grid-48 {
+    height: 48px;
+    width: 48px;
+}
+
+.nc-icon.grid-64 {
+    height: 64px;
+    width: 64px;
+}
+
+.nc-icon.grid-100 {
+    height: 100px;
+    width: 100px;
+}
+
+.nc-align-to-text {
+    /* scale and align icon to the text element */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.0625em;
+    stroke: none;
+    fill: none;
+}
+
+.nc-align-to-text use {
+    color: inherit;
+}
+
+.nc-icon.outline,
+.nc-align-to-text.outline {
+    stroke: currentColor;
+    fill: none;
+}
+
+.nc-icon.outline.stroke-1,
+.nc-align-to-text.outline.stroke-1 {
+    stroke-width: 1px;
+}
+
+.nc-icon.outline.stroke-2,
+.nc-align-to-text.outline.stroke-2 {
+    stroke-width: 2px;
+}
+
+.nc-icon.outline.stroke-3,
+.nc-align-to-text.outline.stroke-3 {
+    stroke-width: 3px;
+}
+
+.nc-icon.outline.stroke-4,
+.nc-align-to-text.outline.stroke-4 {
+    stroke-width: 4px;
+}
+
+.nc-icon.outline.stroke-1 use,
+.nc-icon.outline.stroke-3 use,
+.nc-align-to-text.outline.stroke-1 use,
+.nc-align-to-text.outline.stroke-3 use {
+    -webkit-transform: translateX(0.5px) translateY(0.5px);
+    -moz-transform: translateX(0.5px) translateY(0.5px);
+    -ms-transform: translateX(0.5px) translateY(0.5px);
+    -o-transform: translateX(0.5px) translateY(0.5px);
+    transform: translateX(0.5px) translateY(0.5px);
+}
+
+
+.nc-icon.glyph,
+.nc-align-to-text.glyph  {
+    fill: currentColor;
+    stroke: none;
+}
