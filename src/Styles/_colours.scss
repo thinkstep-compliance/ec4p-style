@@ -1,4 +1,14 @@
-.brand-gradient {
-    background: rgb(221,107,32);
-    background: linear-gradient(-135deg, rgba(221,107,32,1) 0%, rgba(246,173,85,1) 100%);
+.gradient-brand {
+    background: rgb(212,92,27);
+    background: linear-gradient(-135deg, rgb(212,92,27) 0%, rgb(253,158,57) 100%);
+}
+
+.gradient-success {
+    background: rgb(212,92,27);
+    background: linear-gradient(-135deg, rgb(104,211,145) 0%, rgb(24,191,167) 100%);
+}
+
+.gradient-gray {
+    background: rgb(212,92,27);
+    background: linear-gradient(-135deg, rgb(81,81,81) 0%, rgb(49,49,49) 100%);
 }

@@ -1,53 +1,74 @@
 <template>
     <div>
-        <div class="flex font-sans">
-            <div class="w-auto h-screen brand-gradient md:px-4 px-2 py-4 border-r border-orange-600">
-                <a href="#" class="block w-8 mt-2">
-                    <img src="/img/logo-icon-gs.png" alt="Logo Icon" style="image-rendering: optimizeQuality">
-                    <svg class="icon text-white">
-                        <use href="/icons/sprite-guide.svg#icon-menu-6" xlink:href="/icons/sprite-guide.svg#icon-menu-6"/>
-                    </svg>
+        <aside class="h-full fixed top-0 left-0 bg-lgray-600 border-r border-lgray-700 shadow-lg z-30 flex"
+            :class="navbarOpen ? 'w-56' : 'w-16'">
+            <div class="w-full h-32 p-3 flex justify-between">
+                <a href="/" class="inline-block w-12">
+                    <img src="/img/logo-icon-gs.png" alt="Logo Icon">
                 </a>
+                <transition name="fade-in">
+                    <a href="#" 
+                        class="inline-block text-lgray-300"
+                        @click="navbarOpen = navbarOpenPlusDelay = false"
+                        v-show="navbarOpenPlusDelay">
+                        << link
+                    </a>
+                </transition>
             </div>
-            <div class="w-56 h-screen bg-gray-200 p-4 border-r border-gray-300">
-                <a href="#" class="block flex bg-gray-400 text-xl text-white hover:text-gray-600 px-4 py-3 mb-6">
-                    Brand
+        </aside>
+        <div id="MainContent" :class="navbarOpen ? 'pl-56' : 'pl-16'">
+            <div v-show="!navbarOpen" class="px-2 md:px-4 pt-3 pb-4 md:py-4">
+                <a href="#" 
+                    class="inline-block text-lgray-500"
+                    @click="openNavbar">
+                    link >>
                 </a>
-                <a href="#" class="block hover:bg-gray-300 p-2 mb-2">
-                    Colour
-                </a>
-                <a href="#" class="block hover:bg-gray-300 p-2 mb-2">
-                    Typography
-                </a>
-                <a href="#" class="block hover:bg-gray-300 p-2 mb-2">
-                    Logo
-                </a>
-                <a href="#" class="block hover:bg-gray-300 p-2 mb-2">
-                    Illustration
-                </a>
-            </div>
-            <div class="w-2/5 ml-48">
-                <h1 class="font-regular text-2xl mt-8 mb-4">EC<span class="text-orange-600">4</span>P</h1>
-                <h2 class="font-mono font-bold text-3xl mb-6">Brand guidelines</h2>
-                <p class="leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo soluta, voluptates porro vel libero autem aut accusantium enim, deserunt earum nam deleniti velit dicta fugiat quod saepe hic cumque eaque!</p>
             </div>
         </div>
-        <!-- <navbar-aside/>
-        <page-header/>
+        <!-- <page-header/>
         <transition name="pages" mode="out-in">
             <router-view/>
+            <content1/>
         </transition> -->
-        <!-- <notification-toast/> -->
     </div>
 </template>
 
 <script>
+    import NavbarAside from './NavbarAside.vue';
+    import Content1 from './Content1.vue';
+
     export default {
-        
+        components: {
+            NavbarAside,
+            Content1
+        },
+
+        data() {
+            return {
+                navbarOpen: true,
+                navbarOpenPlusDelay: true
+            }
+        },
+
+        methods: {
+            openNavbar() {
+                this.navbarOpen = true;
+
+                setTimeout(() => this.navbarOpenPlusDelay = true, 300);
+            }
+        }
     }
 </script>
 
 <style>
+    aside {
+        transition: left .3s cubic-bezier(.215, .61, .355, 1), width .3s cubic-bezier(.215, .61, .355, 1);
+    }
+
+    #MainContent {
+        transition: padding .3s cubic-bezier(.215, .61, .355, 1), width .3s cubic-bezier(.215, .61, .355, 1);
+    }
+
     .pages-enter { transform: translateY(6px); opacity: 0; }
     .pages-enter-to { transform: translateY(0); opacity: 1; }
 
@@ -56,8 +77,4 @@
 
     .pages-enter-active,
     .pages-leave-active { transition: all 300ms ease-in-out }
-
-    h2 { @apply text-2xl }
-    h3 { @apply text-lg }
-    h2, h3, h4 { @apply font-bold }
 </style>

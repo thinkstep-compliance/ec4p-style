@@ -7,7 +7,12 @@
     transition: opacity 200ms
 }
 
-.fade-enter, .fade-leave-to {
+.fade-in-enter-active {
+    transition: opacity 200ms
+}
+
+.fade-enter, .fade-leave-to,
+.fade-in-enter, .fade-in-leave-to {
     opacity: 0
 }
 

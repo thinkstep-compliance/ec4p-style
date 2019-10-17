@@ -27,7 +27,7 @@
 
 <style>
     .ec4p-notification {
-        @apply bg-gray-600 text-gray-200 p-4 mb-6 ml-6;
+        @apply bg-dgray-600 text-lgray-200 p-4 mb-6 ml-6;
     }
 
     .ec4p-notification .notification-title {
