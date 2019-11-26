@@ -25,6 +25,8 @@
                 </a>
             </div>
         </div>
+
+        <div id="map"></div>
         <!-- <page-header/>
         <transition name="pages" mode="out-in">
             <router-view/>

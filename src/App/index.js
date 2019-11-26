@@ -4,6 +4,11 @@ require('./bootstrap');
 // Style guide root
 Vue.component('style-guide-app', require('./vues/StyleGuideApp.vue').default);
 
+// Maps
+Vue.component('map1', require('./map/Map1.vue').default);
+Vue.component('map2', require('./map/Map2.vue').default);
+Vue.component('regulation-map', require('./map/RegulationMap.vue').default);
+
 // Global components
 Vue.component('on-click-outside', require('./components/OnClickOutside.vue').default);
 Vue.component('notification-toast', require('./components/NotificationToast.vue').default);

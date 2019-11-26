@@ -7,22 +7,20 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-//
-// Specific item pages
-//
-// import ReportPage from '../vues/reporting/ReportPage.vue';
-// import SubmissionPage from '../vues/submission/SubmissionPage.vue';
+// import StyleGuideApp from './vues/StyleGuideApp.vue';
+// import RegulationMap from '../../vues/RegulationMap.vue';
 
 export default new VueRouter({
     routes: [
         // {
         //     path: '/',
-        //     name: 'Dashboard'
+        //     name: 'EC4P Style Guide',
+        //     component: require('../vues/StyleGuideApp.vue')
         // },
         // {
-        //     path: '/data-upload',
-        //     name: 'Data Upload',
-        //     component: DataUploadPage
+        //     path: '/map',
+        //     name: 'EC4P Regulation Map',
+        //     component: require('../vues/RegulationMap.vue')
         // }
     ]
 });
